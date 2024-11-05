@@ -49,6 +49,11 @@ To set up this project on your local machine, follow these steps:
    psql -U postgres
    ```
 
+5. Ensure you are running, to get data in your data base:
+   ```bash
+   node seeds/index.js
+   ```
+   
 ## Usage
 To run the application, use the following command in your terminal:
 ```bash
