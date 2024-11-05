@@ -26,7 +26,7 @@ Throughout this project, I enhanced my understanding of SQL and JavaScript, part
 - [Tests](#tests)
 
 ## Repository and Video
-- **Video Demonstration:** [Watch the video](https://app.screencastify.com/v2/manage/videos/SYPGNxywJ4tg9nBBlsi7)
+- **Video Demonstration:** [Watch the video](https://app.screencastify.com/v3/watch/dGJyws6zXtZg1skGRslj)
 - **Code Repository:** [View the code on GitHub](https://github.com/danielsantana9824/13-e-commerce)
 
 ## Installation
