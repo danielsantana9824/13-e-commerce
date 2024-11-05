@@ -5,26 +5,25 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // get all products
 router.get('/', async(req, res) => {
-  // find all products
-  // be sure to include its associated Category and Tag data
+  // find all categories
+  // be sure to include its associated Products
   try {
     const productData = await Product.findAll({
       include: [
         {
           model: Category,
-          as: 'category',  
+          as: 'category',
         },
         {
-          model: Tag,     
-          as: 'tags',      
+          model: Tag,
+          as: 'tags',
         }
       ]
     });
     
     res.status(200).json(productData);
   } catch (err) {
-    console.error(err); // Para debug
-    res.status(500).json({ error: 'An error occurred while retrieving products.' });
+    res.status(500).json(err);
   }
 });
 
@@ -36,11 +35,11 @@ router.get('/:id', async(req, res) => {
     const productData = await Product.findByPk(req.params.id, {
       include: [
         {
-          model: Category, // Incluye la categoría asociada
+          model: Category,
           as: 'category'
         },
         {
-          model: Tag,      // Incluye las etiquetas asociadas
+          model: Tag,   
           as: 'tags'
         }
       ]
